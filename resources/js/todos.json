@@ -1,0 +1,16 @@
+{
+    "siswa": [
+        
+        {
+            "Aktivitas":"Belajar",
+            "Tanggal":"Januari 2022",
+            "Siswa":"Khoirun"
+        },
+
+        {
+            "Aktivitas":"Coding",
+            "Tanggal":"Januari 2022",
+            "Siswa":"Nisa"
+        }
+    ]
+}
