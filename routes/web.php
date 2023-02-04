@@ -140,3 +140,22 @@ Route::get('musik-ser',function(){
 });
 
 
+use App\Http\Controllers\TodoController;
+use App\Http\Controllers\TodoBuilderController;
+Route::controller(TodoController::class)->group(function(){
+    Route::get('/add-todo','add');
+    Route::get('/edit-todo','edit');
+    Route::get('/delete-todo','delete');
+});
+
+Route::controller(TodoBuilderController::class)->group(function(){
+    Route::get('/query/add-todo','add');
+    Route::get('/query/edit-todo','edit');
+    Route::get('/query/delete-todo','delete');
+});
+
+
+use App\Http\Controllers\StandarResponseController;
+
+
+
