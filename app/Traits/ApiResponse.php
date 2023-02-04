@@ -42,7 +42,5 @@ trait ApiResponse
             'error' => $error,
             'message' => $message,
         ],Response::HTTP_FORBIDDEN);     
-    }
-
-    
+    }   
 }

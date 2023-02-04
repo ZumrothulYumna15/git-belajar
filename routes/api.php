@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\StandarResponseController;
 use App\Http\Controllers\Api\CrudTodoController;
+use App\Http\Controllers\Api\CrudDataUserController;
 use App\Traits\ApiResponse;
 
 
@@ -30,6 +31,14 @@ Route::controller(StandarResponseController::class)->group(function(){
 });
 
 Route::group(['prefix'=>'todo','controller'=>CrudTodoController::class],function(){
+    Route::get('/list','list');
+    Route::get('/detail/{id}','detail');
+    Route::post('/create','create');
+    Route::post('/update/{id}','update');
+    Route::delete('/delete/{id}','delete');
+});
+
+Route::group(['prefix'=>'data_user','controller'=>CrudDataUserController::class],function(){
     Route::get('/list','list');
     Route::get('/detail/{id}','detail');
     Route::post('/create','create');

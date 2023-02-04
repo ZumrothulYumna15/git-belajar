@@ -154,8 +154,22 @@ Route::controller(TodoBuilderController::class)->group(function(){
     Route::get('/query/delete-todo','delete');
 });
 
+use App\Http\Controllers\DataUserController;
+use App\Http\Controllers\DataUserBuilder;
+Route::controller(DataUserController::class)->group(function(){
+    Route::get('/add-data_user','add');
+    Route::get('/edit-data_user','edit');
+    Route::get('/delete-data_user','delete');
+});
 
-use App\Http\Controllers\StandarResponseController;
+Route::controller(DataUserBuilder::class)->group(function(){
+    Route::get('/query/add-data_user','add');
+    Route::get('/query/edit-data_user','edit');
+    Route::get('/query/delete-data_user','delete');
+});
+
+
+
 
 
 
