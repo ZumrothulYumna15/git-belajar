@@ -162,12 +162,11 @@ Route::controller(DataUserController::class)->group(function(){
     Route::get('/delete-data_user','delete');
 });
 
-Route::controller(DataUserBuilder::class)->group(function(){
-    Route::get('/query/add-data_user','add');
-    Route::get('/query/edit-data_user','edit');
-    Route::get('/query/delete-data_user','delete');
-});
 
+use App\Http\Controllers\ListApiController;
+use App\Http\Controllers\ListTableController;
+Route::get('/list-api', [ListApiController::class,'index']);
+Route::get('/list-table', [ListTableController::class,'index']);
 
 
 
